@@ -19,7 +19,7 @@ import java.lang.reflect.Method;
 
 public class CooldownModule extends Module<LegacyPVP> implements Listener {
     private static final Method GET_HANDLE = Reflection.getCBMethod("entity.CraftPlayer", "getHandle");
-    private static final Method GET_ATTRIBUTE = Reflection.getNMSMethod("EntityLiving", "getAttributeInstance", Reflection.getNMSClass("IAtrribute"));
+    private static final Method GET_ATTRIBUTE = Reflection.getNMSMethod("EntityLiving", "getAttributeInstance", Reflection.getNMSClass("IAttribute"));
     private static final Method SET_ATTRIBUTE = Reflection.getNMSMethod("AttributeInstance", "setValue", double.class);
     private static final Object ATTACK_SPEED_ATTRIBUTE = Reflection.getFieldValue(Reflection.getNMSField("GenericAttributes", "f"), null);
 
@@ -40,6 +40,7 @@ public class CooldownModule extends Module<LegacyPVP> implements Listener {
 
     @EventHandler(priority = EventPriority.MONITOR)
     public void onPlayerJoin(PlayerJoinEvent event) {
+        System.out.println("XYZ");
         final Player player = event.getPlayer();
         setAttackSpeed(player, MAX_ATTACK_SPEED);
     }
