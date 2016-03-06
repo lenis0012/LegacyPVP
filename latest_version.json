@@ -2,5 +2,5 @@
   "name": "LegacyPVP v1.0",
   "type": "release",
   "gameVersion": "1.8.8",
-  "downloadURL": ""
+  "downloadURL": "http://ci.lenis0012.com/job/LegacyPVP/lastSuccessfulBuild/artifact/target/LegacyPVP-Spigot-1.0.jar"
 }
