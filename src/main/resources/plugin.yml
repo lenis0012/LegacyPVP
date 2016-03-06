@@ -1,0 +1,8 @@
+name: ${project.name}
+version: ${project.version}
+main: com.lenis0012.legacypvp.LegacyPVP
+author: lenis0012
+commands:
+  legacypvp:
+    description: LegacyPVP main command
+    usage: /legacypvp
