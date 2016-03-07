@@ -2,6 +2,7 @@ package com.lenis0012.legacypvp;
 
 import com.lenis0012.legacypvp.modules.armor.ArmorModule;
 import com.lenis0012.legacypvp.modules.cooldown.CooldownModule;
+import com.lenis0012.legacypvp.modules.general.General;
 import com.lenis0012.pluginutils.PluginHolder;
 import com.lenis0012.pluginutils.modules.configuration.ConfigurationModule;
 
@@ -21,6 +22,7 @@ public class LegacyPVP extends PluginHolder {
         config.reload(); // Load settings
         config.save(); // Save settings :)
 
+        registry.registerModules(General.class);
         if(config.isArmorModule()) {
             registry.registerModules(ArmorModule.class);
         }
